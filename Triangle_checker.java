@@ -8,6 +8,7 @@ public class TriangleClassifier {
         double b = scanner.nextDouble();
         double c = scanner.nextDouble();
 
+        // Bug: Using <= instead of <, allowing invalid triangles like 1, 1, 3
         if (a + b <= c || a + c <= b || b + c <= a) {
             System.out.println("Not a valid triangle.");
             return;
